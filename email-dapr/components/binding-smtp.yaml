@@ -1,0 +1,35 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: binding-smtp # the name of the component
+  namespace: default
+spec:
+  type: bindings.smtp
+  version: v1
+  metadata:
+    - name: host
+      value: "in-v3.mailjet.com"
+    - name: port
+      value: 587
+    - name: user
+      value: 1168009fd75118913b2a902b126f1ada
+    - name: password
+      value: 433893cf163847e81f796a2f883627e3
+    - name: skipTLSVerify
+      value: true
+    - name: emailFrom
+      value: "wishesfromsalman@gmail.com"
+    - name: emailTo
+      value: "salmankhanprs@gmail.com.com"
+    - name: subject
+      value: "tetsing dapr "
+    - name: priority
+      value: 1
+
+
+# SMTP_HOST=in-v3.mailjet.com
+
+# SMTP_PORT=587
+
+# SMTP_USER=1168009fd75118913b2a902b126f1ada
+# SMTP_PASS=433893cf163847e81f796a2f883627e3
